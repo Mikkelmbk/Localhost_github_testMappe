@@ -1,0 +1,12 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#html-template {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
