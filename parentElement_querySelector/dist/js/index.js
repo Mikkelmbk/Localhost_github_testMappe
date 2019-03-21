@@ -7,18 +7,25 @@ document.addEventListener('DOMContentLoaded',()=>{
 	.then((data)=>{
 
 		let navTest = document.querySelector('.navTest');
+
+		let articleTest = document.querySelector('.articleTest');
 	
 		navTest.innerHTML = data;
-		
-		let liTestElements = document.querySelectorAll('.liTest');
 
-		liTestElements.forEach((liTestElement)=>{
+		
+		let liNavTestElements = navTest.querySelectorAll('.liTest');
+		
+		liNavTestElements.forEach((liTestElement)=>{
 			liTestElement.classList.add('color');
 		})
+		
+		articleTest.innerHTML = data;
 
+		let liArticleTestElements = articleTest.querySelectorAll('.liTest');
 
-		console.log(liTestElements);
-
+		liArticleTestElements.forEach((liTestElement)=>{
+			liTestElement.classList.add('color2');
+		})
 
 	})
 
