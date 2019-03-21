@@ -19,4 +19,12 @@ body {
   color: blue;
 }
 
+.change__font-size {
+  font-size: 22px;
+}
+
+.change__order {
+  order: 5;
+}
+
 /*# sourceMappingURL=style.css.map */
