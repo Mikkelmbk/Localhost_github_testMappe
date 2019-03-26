@@ -1,0 +1,20 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#display-product-price {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+}
+
+#display-product-title {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+/*# sourceMappingURL=style.css.map */
