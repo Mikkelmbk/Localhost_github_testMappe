@@ -8,14 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
 	
 	let colorChanger = true;
 	
-	darkTheme();
+	// darkTheme();
 
 
 
-	// changeStyleSheetBtnElement1.addEventListener('click',()=>{
+	changeStyleSheetBtnElement1.addEventListener('click',()=>{
 
-	// 	headLinkElement2.href = "css/lightTheme.css";
-	// })
+		// headLinkElement2.href = "css/lightTheme.css";
+		darkTheme();
+	})
 
 
 	// changeStyleSheetBtnElement2.addEventListener('click', () => {
