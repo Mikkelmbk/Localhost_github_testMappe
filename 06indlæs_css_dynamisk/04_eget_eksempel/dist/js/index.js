@@ -1,61 +1,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-	
-	let headLinkElement2 = document.querySelector('#headCssID2');
-	
-	let changeStyleSheetBtnElement1 = document.querySelector('.cssChangerBtn1');
-	let changeStyleSheetBtnElement2 = document.querySelector('.cssChangerBtn2');
-	
-	let colorChanger = true;
-	
-	// darkTheme();
+	let headLinkElement = document.querySelector('#headCssID');
 
+	let changeCssByBtnElement = document.querySelector('.changeStyleSheetBtn');
 
+	let stylesheetArray = [];
 
-	changeStyleSheetBtnElement1.addEventListener('click',()=>{
+	let stylesheetIndex = 0;
 
-		// headLinkElement2.href = "css/lightTheme.css";
-		darkTheme();
+	let stylesheetDivContainerElement = document.querySelector('.hiddenhrefs');
+
+	stylesheetDivContainerElement.style.display = "none";
+
+	let stylesheetDivElements = stylesheetDivContainerElement.querySelectorAll('.hiddenhref');
+
+	stylesheetDivElements.forEach((stylesheetDivElement)=>{
+		let hrefContainer = stylesheetDivElement.dataset.stylehref;
+		stylesheetArray.push(hrefContainer);
+	});
+
+	changeCssByBtnElement.addEventListener('click',()=>{
+		headLinkElement.href = stylesheetArray[stylesheetIndex];
+		stylesheetIndex++;
+		if(stylesheetIndex >= stylesheetArray.length){
+			stylesheetIndex = 0;
+		}
 	})
 
-
-	// changeStyleSheetBtnElement2.addEventListener('click', () => {
-
-	// 	headLinkElement2.href = "css/darkTheme.css";
-	// })
+	
 
 
+	
 
-	// changeStyleSheetBtnElement1.addEventListener('click',()=>{
-
-	function darkTheme() {
-		if (colorChanger == true) {
-			setTimeout(() => {
-				headLinkElement2.href = "css/darkTheme.css";
-				colorChanger = false;
-				lightTheme();
-				console.log(colorChanger);
-			}, 1500)
-		}
-
-
-	}
-
-
-	function lightTheme() {
-		if (colorChanger == false) {
-			setTimeout(() => {
-				headLinkElement2.href = "css/lightTheme.css";
-				colorChanger = true;
-				darkTheme();
-				console.log(colorChanger);
-
-			}, 1500)
-		}
-
-	}
-
-
-	// })
+	
 
 }) // DOMContent Slutter
