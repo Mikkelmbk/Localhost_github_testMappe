@@ -1,61 +1,29 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded',()=>{
+
+	let changeCssByHeadLinkElement = document.querySelector('#changeCss');
+
+
+	let changeCssByBtnElement1 = document.querySelector('.changeCssByBtn1');
+	let changeCssByBtnElement2 = document.querySelector('.changeCssByBtn2');
 
 	
-	let headLinkElement2 = document.querySelector('#headCssID2');
 	
-	let changeStyleSheetBtnElement1 = document.querySelector('.cssChangerBtn1');
-	let changeStyleSheetBtnElement2 = document.querySelector('.cssChangerBtn2');
+	changeCssByBtnElement1.addEventListener('click',()=>{
+		
+		changeCssByHeadLinkElement.href = "";
+		
+	})
 	
-	let colorChanger = true;
-	
-	// darkTheme();
+	changeCssByBtnElement2.addEventListener('click',()=>{
+		
+		changeCssByHeadLinkElement.href = "css/style2.css";
 
-
-
-	changeStyleSheetBtnElement1.addEventListener('click',()=>{
-
-		// headLinkElement2.href = "css/lightTheme.css";
-		darkTheme();
 	})
 
-
-	// changeStyleSheetBtnElement2.addEventListener('click', () => {
-
-	// 	headLinkElement2.href = "css/darkTheme.css";
-	// })
+	
 
 
 
-	// changeStyleSheetBtnElement1.addEventListener('click',()=>{
 
-	function darkTheme() {
-		if (colorChanger == true) {
-			setTimeout(() => {
-				headLinkElement2.href = "css/darkTheme.css";
-				colorChanger = false;
-				lightTheme();
-				console.log(colorChanger);
-			}, 1500)
-		}
+}) // DomContentLoaded Slutter
 
-
-	}
-
-
-	function lightTheme() {
-		if (colorChanger == false) {
-			setTimeout(() => {
-				headLinkElement2.href = "css/lightTheme.css";
-				colorChanger = true;
-				darkTheme();
-				console.log(colorChanger);
-
-			}, 1500)
-		}
-
-	}
-
-
-	// })
-
-}) // DOMContent Slutter

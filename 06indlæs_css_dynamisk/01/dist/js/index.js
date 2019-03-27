@@ -1,39 +1,25 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded',()=>{
 
-	let headLinkElement = document.querySelector('#headCssID');
+	let changeCssByHeadLinkElement = document.querySelector('#changeCss');
 
-	let changeStyleSheetBtnElement = document.querySelector('.cssChangerBtn');
 
-	let index = headLinkElement.dataset.index;
+	let changeCssByBtnElement1 = document.querySelector('.changeCssByBtn1');
+	let changeCssByBtnElement2 = document.querySelector('.changeCssByBtn2');
 
-	changeStyleSheetBtnElement.addEventListener('click',()=>{
 
-		if(index == 0){
-			headLinkElement.href = "css/style.css";
-			index++;
-			console.log(index);
-			headLinkElement.dataset.index = index
-		}
+	changeCssByBtnElement1.addEventListener('click',()=>{
 
-		else if(index == 1){
-			headLinkElement.href = "css/style.1.css";
-			index++;
-			console.log(index);
-			headLinkElement.dataset.index = index
-		}
-		else if(index == 2){
-			headLinkElement.href = "css/style.2.css";
-			index++;
-			console.log(index);
-			headLinkElement.dataset.index = index
-		}
-		else if(index == 3){
-			headLinkElement.href = "css/style.3.css";
-			index = 0;
-			console.log(index);
-			headLinkElement.dataset.index = index
-		}
-
+		changeCssByHeadLinkElement.href = "css/style1.css";
+		
+	});
+	
+	changeCssByBtnElement2.addEventListener('click',()=>{
+		
+		changeCssByHeadLinkElement.href = "css/style2.css";
 	})
 
-}) // DOMContent Slutter
+
+
+
+}) // DomContentLoaded Slutter
+
