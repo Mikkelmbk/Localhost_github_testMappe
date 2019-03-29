@@ -1,0 +1,22 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+.topContainer {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: grey;
+}
+
+.bottomContainer {
+  min-height: 50vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: grey;
+}
+
+/*# sourceMappingURL=style.css.map */
